@@ -407,7 +407,7 @@ class App:
                     defect_area_sum += defect_area
                     loc = str(defect_real_x*1.5*10) +"x"+str(defect_real_y)
                     self.db.insertDefect(defect_area,loc,1,product_time)
-                    self.lbdefectsList.insert(di,str(di+1)+"-Benek X:"+str(defect_real_x*1.5*10)+"mm Y:"+str(defect_real_y)+"mm Alan: "+str(defect_area)+"mm\u00B2")
+                    self.lbdefectsList.insert(di,str(di+1)+"-Kusur X:"+str(defect_real_x*1.5*10)+"mm Y:"+str(defect_real_y)+"mm Alan: "+str(defect_area)+"mm\u00B2")
 
                 #Sonuç görünütüsü dosyaya yazdırılıyor
                 cv2.imwrite((self.vid.img_write_dir+img_file_name+"_"+str(self.vid.BandImageThreshold)+"_"+str(self.vid.section_image_num)+"_result.jpg"), img_resized)
