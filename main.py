@@ -532,7 +532,7 @@ class App:
                 #print(color_tone_differences)
                 #print("Renk Ton Değeri: "+str(color_tone_differences.mean()))
                 color_tone_val = int(color_tone_differences.mean())
-                self.lblColorTone.config(text="Renk Ton Değeri:"+str(color_tone_val))
+                self.lblColorTone.config(text=self.lang[11]+":"+str(color_tone_val))
                 if self.SaveResults == 1:
                     self.db.insertQualityResult(product_tile_id,surface_quality_val,color_tone_val)
                 self.vid.color_tone_differences.clear();
