@@ -50,7 +50,7 @@ class App:
         #self.window.bind("<Configure>", YenidenBoyutlandir)
         self.window.title(window_title)
         self.window.title(self.lang[20])
-        print(main_icon_dir)
+        #print(main_icon_dir)
         self.icon = PhotoImage(file = main_icon_dir)
         self.window.iconphoto(False, self.icon)
         
@@ -215,7 +215,7 @@ class App:
             self.vid.camera.ExposureTimeAbs = ExposureTimeVal
             self.vid.camera.AcquisitionLineRateAbs = AcquisitionLineRateVal
             self.vid.camera.GainRaw = GainRawVal
-            print (str(self.vid.camera.ExposureTimeAbs.Value) + " "+str(self.vid.camera.GainRaw.Value)+ " "+str(self.vid.camera.AcquisitionLineRateAbs.Value))
+            #print (str(self.vid.camera.ExposureTimeAbs.Value) + " "+str(self.vid.camera.GainRaw.Value)+ " "+str(self.vid.camera.AcquisitionLineRateAbs.Value))
         except  ValueError:
             self.lblMessage.config(text=self.lang[5]+":"+self.lang[28])
             self.lblMessage.config(bg="#f57f7f")
@@ -251,7 +251,7 @@ class App:
         tile_height_pixel_sum  = 0
         product_time = now.strftime("%Y-%m-%d %H:%M:%S")
         img_file_name = str(tile_no) + "_"+str(int(self.vid.camera.GainRaw.Value))+"_"+str(int(self.vid.camera.ExposureTimeAbs.Value))+"_"+str(int(self.vid.camera.AcquisitionLineRateAbs.Value))+"_"+now.strftime("%Y%m%d%H%M%S")
-        print(image_sum)
+        #print(image_sum)
         #self.lblIslemDurum.config(text='Bilgi: Kameradan görüntü alınıyor. - '+str(image_sum/89786))
         self.lblIslemDurum.config(text=self.lang[5]+':'+ self.lang[12]+'. - ')
         
@@ -259,11 +259,10 @@ class App:
             plt.close('all')
             self.lblIslemDurum.config(text=self.lang[5]+':'+self.lang[13]+'- '+str(image_sum))
             img_before_sum = np.sum(self.vid.img_before)
-            
             img = frame
-            print("Boyut: "+str(img.shape))
+            #print("Boyut: "+str(img.shape))
             img_original =  img[:,15:frame.shape[1]-20]
-            print("Boyut: "+str(img_original.shape))
+            #print("Boyut: "+str(img_original.shape))
             #img_original =  img
             scale_percent = 2 # percent of original size
             filter = Filter(img,210,(3/5),scale_percent)
@@ -318,7 +317,7 @@ class App:
                 #self.ResultImage = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(vertical_filtered_resized))
                 #self.canvas_ResultImage.config(width=(self.vid.vertical_original.shape[1]*0.2), height=(self.vid.vertical_original.shape[0]*scale_percent))
                 #self.canvas_ResultImage.create_image(0, 0, image = self.ResultImage , anchor = tk.NW)
-                print("Görüntü Kaydetme Başlıyor")
+                print("Görüntü Kaydetme Başlıyor"+str(self.vid.img_write_dir))
                 cv2.imwrite((self.vid.img_write_dir+img_file_name+"_"+str(self.vid.BandImageThreshold)+"_"+str(self.vid.section_image_num)+".jpg"), self.vid.vertical_original)
                 cv2.imwrite((self.vid.img_write_dir+img_file_name+"_"+str(self.vid.BandImageThreshold)+"_"+str(self.vid.section_image_num)+"_filter.jpg"), self.vid.vertical_filtered)
                 print(str((self.vid.section_image_num))+" kesit alındı ve görüntü kaydedildi")
@@ -371,7 +370,7 @@ class App:
                     left_vertical = np.argwhere(vertical_section[0:int(width_section/2)]==left_vertical_max)[:,].max(axis=0)[0]
                     right_vertical = int(width_section/2)+np.argwhere(vertical_section[(int(width_section/2)):,]==right_vertical_max)[:,].max(axis=0)[0]
                     
-                    print(str(section_no+1)+" .kesit left: "+str(left_vertical) + " right: "+str(right_vertical)+" right-left: "+str(right_vertical-left_vertical))
+                    #print(str(section_no+1)+" .kesit left: "+str(left_vertical) + " right: "+str(right_vertical)+" right-left: "+str(right_vertical-left_vertical))
                     if section_no == 0 or section_no == (tile_section_num-1):
                         #print(str((section_no+1))+ " "+str(section.sum()))
                         for hi in range(0,height_section):
@@ -413,22 +412,22 @@ class App:
                         #print("vertical_section_mmm-w: "+str(verticalSection_mmm.shape[0]))
                         window_size_vs = int(round((verticalSection_mmm.shape[0]/60),0))
                         defect_t_val  = 0.23; #0.22 orjinal
-                        print("Pencere Boyutu:"+str(window_size_vs))
+                        #print("Pencere Boyutu:"+str(window_size_vs))
                         for vsi in range(start_vs,end_vs,window_size_vs):
                             #Burada contrast hesaplanıp ona göre işlem yapılabilir.
                             contrast = (verticalSection_mmm[vsi:(vsi+window_size_vs)].max()-verticalSection_mmm[vsi:(vsi+window_size_vs)].min())
                             contrast /= (verticalSection_mmm[vsi:(vsi+window_size_vs)].max()+verticalSection_mmm[vsi:(vsi+window_size_vs)].min())
-                            print("Normal Alanı Kontrast değeri"+str(contrast));
-                            print("Defect Val:"+str(verticalSection_mmm[vsi:(vsi+window_size_vs)].max()))
+                            #print("Normal Alanı Kontrast değeri"+str(contrast));
+                            #print("Defect Val:"+str(verticalSection_mmm[vsi:(vsi+window_size_vs)].max()))
                             if defect_t_val < verticalSection_mmm[vsi:(vsi+window_size_vs)].max():
-                                print("Kusur Alanı Kontrast değeri"+str(contrast));
-                                print ("max deger: "+str(verticalSection_mmm[vsi:(vsi+window_size_vs)].max()) +" max konum: "+str(np.argmax(verticalSection_mmm[vsi:(vsi+window_size_vs)]).max()+vsi))
+                                #print("Kusur Alanı Kontrast değeri"+str(contrast));
+                                #print ("max deger: "+str(verticalSection_mmm[vsi:(vsi+window_size_vs)].max()) +" max konum: "+str(np.argmax(verticalSection_mmm[vsi:(vsi+window_size_vs)]).max()+vsi))
                                 defect_location_x = np.argmax(verticalSection_mmm[vsi:(vsi+window_size_vs)]).max()+vsi
                                 defect_val = tile_section[:,defect_location_x].min()
                                 defect_location_y = np.argwhere(tile_section[:,defect_location_x]==defect_val).max()
                                 defect_tile_location_x = defect_location_x + left_vertical 
                                 defect_tile_location_y = defect_location_y + (section_no*64)#tile_section.shape[0])
-                                print ("kusur karo konum x: "+str(defect_location_x) + " kusur karo konum y: "+str(defect_tile_location_y)+ " kusur kesit konum y:"+str(defect_location_y))
+                                #print ("kusur karo konum x: "+str(defect_location_x) + " kusur karo konum y: "+str(defect_tile_location_y)+ " kusur kesit konum y:"+str(defect_location_y))
                                 defect_locations.append([defect_tile_location_x, defect_tile_location_y])
                                 defect_num +=1
                                 # defect_location_vl = np.argmax(verticalSection_mmm[vsi:(vsi+window_size_vs)])
@@ -453,12 +452,12 @@ class App:
                     #Burada karo kesiti biriktirme yapılacak.
                     #tile_image.append(tile_section)
                     #tile_image = np.hstack(tile_section)
-                    print(str(section_no+1)+". Kesit yükseklik: "+str(tile_section.shape[0]) + " Kesit Genişlik: "+str(tile_section.shape[1]))
+                    #print(str(section_no+1)+". Kesit yükseklik: "+str(tile_section.shape[0]) + " Kesit Genişlik: "+str(tile_section.shape[1]))
                     tile_image = np.concatenate(tile_section,axis=1)
                     section_no += 1
                     tile_width_pixel_sum += tile_section.shape[1] ;
                     tile_height_pixel_sum += tile_section.shape[0];
-                    print("Karo genişlik pikseli: "+str(tile_width_pixel_sum) + " Karo Yükseklik Pikseli: "+str(tile_height_pixel_sum))
+                    #print("Karo genişlik pikseli: "+str(tile_width_pixel_sum) + " Karo Yükseklik Pikseli: "+str(tile_height_pixel_sum))
                 # print(type(tile_image))
                 # #tile_image = np.array(tile_image)
                 # #tile_image = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(tile_image))
@@ -479,7 +478,7 @@ class App:
                 defect_area_sum = 0;
                 for di in range(len(defect_locations)):
                     cv2.circle(img_resized, (defect_locations[di][0],defect_locations[di][1]), 15, (255, 0, 0), thickness=1, lineType=1, shift=0)
-                    print(str(di)+". kusur konum: "+str(defect_locations[di][0]) + " "+str(defect_locations[di][1]))
+                    #print(str(di)+". kusur konum: "+str(defect_locations[di][0]) + " "+str(defect_locations[di][1]))
                     cv2.putText(img_resized, str(di+1), (defect_locations[di][0]-20,defect_locations[di][1]-20), font, fontScale, color, 2, cv2.LINE_AA)    
                     defect_real_x = round(600*defect_locations[di][0]/tile_width_pixel,0)
                     defect_real_y = round(600*defect_locations[di][1]/tile_height_pixel_sum,0)
@@ -488,9 +487,9 @@ class App:
                     ppm = ((tile_width_pixel+tile_height_pixel_sum)*2)/20
                     tile_w_h = tile_width_pixel/tile_height_pixel_sum;
 
-                    print("ppm: "+str(ppm)+"ppm_w: "+str(ppm_w)+" ppm_h:"+str(ppm_h)+" en-boy piksel oranı:"+str(tile_w_h)+" twp: "+str(tile_width_pixel)+" thp: "+str(tile_height_pixel_sum))
+                    #print("ppm: "+str(ppm)+"ppm_w: "+str(ppm_w)+" ppm_h:"+str(ppm_h)+" en-boy piksel oranı:"+str(tile_w_h)+" twp: "+str(tile_width_pixel)+" thp: "+str(tile_height_pixel_sum))
                     defect_area= random.randrange(1, 6)/100
-                    print("defect area: "+str(defect_area))
+                    #print("defect area: "+str(defect_area))
                     defect_area_sum += defect_area
                     #loc = str(defect_real_x*1.5*10) +"x"+str(defect_real_y)
                     loc = str(defect_real_x) +"x"+str(defect_real_y)
@@ -515,7 +514,7 @@ class App:
                 self.vid.vertical_original = 0
                 self.vid.vertical_filtered = 0
                 surface_quality_val = (100-(defect_area_sum)/600)
-                print (str(surface_quality_val) + " "+str(defect_area_sum))
+                #print (str(surface_quality_val) + " "+str(defect_area_sum))
                 if surface_quality_val == 100:
                     surface_quality_class  = 1
                 if surface_quality_val < 100:
