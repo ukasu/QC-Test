@@ -318,6 +318,7 @@ class App:
                 #self.ResultImage = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(vertical_filtered_resized))
                 #self.canvas_ResultImage.config(width=(self.vid.vertical_original.shape[1]*0.2), height=(self.vid.vertical_original.shape[0]*scale_percent))
                 #self.canvas_ResultImage.create_image(0, 0, image = self.ResultImage , anchor = tk.NW)
+                print("Görüntü Kaydetme Başlıyor")
                 cv2.imwrite((self.vid.img_write_dir+img_file_name+"_"+str(self.vid.BandImageThreshold)+"_"+str(self.vid.section_image_num)+".jpg"), self.vid.vertical_original)
                 cv2.imwrite((self.vid.img_write_dir+img_file_name+"_"+str(self.vid.BandImageThreshold)+"_"+str(self.vid.section_image_num)+"_filter.jpg"), self.vid.vertical_filtered)
                 print(str((self.vid.section_image_num))+" kesit alındı ve görüntü kaydedildi")
@@ -594,6 +595,8 @@ class VideoCapture:
         else:
             self.img_write_dir ="/var/www/html/kBots/karo/"
 
+        print(self.img_write_dir)
+        
         try:
             self.camera.Open()
             self.camera.ExposureTimeAbs = 150
