@@ -589,10 +589,20 @@ class VideoCapture:
         self.section_image_num= 1
 
         if os.name == "nt":
-            self.img_write_dir ="C:\\xampp\\htdocs\\kBots\\karo\\"
+            if !(os.path.isdir("C:\\xampp\\htdocs\\kBots\\karo\\")):
+                os.mkdir("C:\\xampp\\htdocs\\kBots\\karo\\")
+                self.img_write_dir ="C:\\xampp\\htdocs\\kBots\\karo\\"
+            else:
+                self.img_write_dir ="C:\\xampp\\htdocs\\kBots\\karo\\"
+
             #self.img_write_dir = "kamera\\goruntu\\"
         else:
-            self.img_write_dir ="/var/www/html/kBots/karo/"
+            if !(os.path.isdir("/var/www/html/kBots/karo/")):
+                os.mkdir("/var/www/html/kBots/karo/")
+                self.img_write_dir ="/var/www/html/kBots/karo/"
+            else:
+                self.img_write_dir ="/var/www/html/kBots/karo/"
+            
 
         print(self.img_write_dir)
         
