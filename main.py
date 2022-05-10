@@ -540,7 +540,7 @@ class App:
         self.window.after(self.delay,self.update)
 
     def read_lang(self,lang_option):
-        f = open('Diller.json',"r",encoding='utf8')
+        f = open('Lang.json',"r",encoding='utf8')
         data = json.load(f)
         lang = []
         ind = 0
