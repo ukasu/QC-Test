@@ -1,5 +1,3 @@
-# Akıllı Koltuk Kılfına Veri Alma
-import serial
 import time
 import numpy as np
 import datetime
@@ -17,7 +15,7 @@ class Database:
             self.db = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                password="usak64_?",
+                password="",
                 database="kbots"
             )
             self.cursor = self.db.cursor()
