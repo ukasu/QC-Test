@@ -803,36 +803,6 @@ class CommandLineParser:
         # Here args is of namespace and values will be accessed through tag names
         self.args = parser.parse_args()
 
-
-
-lang_tr =["Anlık Bant Görüntüsü","Kalite Kontrol Sonuç","İşlemler","İşlem Durum Bilgisi","Bilgi",
-            "Mesaj","Karo Görüntüsü",'Kusur Tespit Görüntüsü',"Yüzey Kalitesi","Kalite Sınıfı",
-            "Kusur Adedi","Renk Ton Değeri","Sonucu Kaydet","Kameradan görüntü alınıyor","Karo görüntüleri alınıyor",
-            "Çizik","Leke","Gözenek","Çatlak","Benek",
-            "kBots: Kalite Kontrol Yazılımı","Alan","Standart dışı","Sınıf","Kazanç (Ham)",
-            "Pozlama Süresi","Bant Görüntü Değer","Ayarları Değiştir","Lütfen sayısal değer giriniz","En/Boy oranı",
-            "Karo görüntüsü alındı","Kalite sınıfı hesaplandı","Kusurlar tespit edildi","Kamera Algılama","Kamera algınamadı. Lütfen bağlı olduğundan emin olunuz.",
-            "Kamera açılamadı. Lütfen bağlı olduğundan emin olunuz."," Yüzey kalitesi hesaplandı","Sonuçları Raporlama Sistemine Kaydet","Akış Satır Oranı"
-            ]
-lang_en = ["Production Line Imaging","Quality Control Result","Operations","Operation Status","Info",
-            "Message","Tile Image",'Defect Detection Image',"Surface Quality","Quality Class",
-            "Defect Number","Color Tone Difference","Save Result","Image is being captured from camera","Tile images are being captured from camera",
-            "Crack,","Fleck","Pore","Scratch","Spot",
-            "kBots: Ceramic Tile Quality Control Program","Area","Non-standard","Class","Gain (Raw)",
-            "Exposure Time","Image Value","Change Settings","Please enter an integer value","Aspect Ratio",
-            "Time image captured","Quality class defined","Defects detected","Detecting Camera","The camera can not be detected. Please be sure it's connected.",
-            "The camera can not be opened. Please be sure it's connected.","Surface Quality is calculated","Save Results to Reporting System","Acquisition Line Rate"
-            ]
-lang_de = ["Fertigungslinien-Bildgebung", "Ergebnis der Qualitätskontrolle", "Vorgänge", "Vorgangsstatus", "Info",
-             "Meldung", "Kachelbild", "Fehlererkennungsbild", "Oberflächenqualität", "Qualitätsklasse",
-             "Fehlernummer", "Farbtonunterschied", "Ergebnis speichern", "Bild wird von der Kamera erfasst", "Kachelbilder werden von der Kamera erfasst",
-             "Riss", "Flecken", "Pore", "Kratzer", "Beflecken",
-             "kBots: Qualitäts kontroll programm für Keramikfliesen", "Gebiet", "Nicht-Standard", "Klasse", "Gewinn (roh)",
-             "Belichtungszeit", "Bildwert", "Einstellungen ändern", "Bitte geben Sie einen ganzzahligen Wert ein", "Seitenverhältnis",
-             "Bildaufnahmezeit", "Qualitätsklasse definiert", "Fehler erkannt", "Kamera wird erkannt", "Die Kamera kann nicht erkannt werden. Bitte stellen Sie sicher, dass sie angeschlossen ist.",
-             "Die Kamera kann nicht geöffnet werden. Bitte stellen Sie sicher, dass sie angeschlossen ist.", "Oberflächenqualität wird berechnet", "Ergebnisse im Berichtssystem speichern", "Erfassungslinienrate"
-             ]
-
 def main(lang_var,main_icon_dir):
     # Create a window and pass it to the Application object
     #lang_window()
