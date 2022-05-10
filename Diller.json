@@ -1,0 +1,275 @@
+[
+ {
+  "Sıra No": 1,
+  "Dizi No": 0,
+  "TR": "Anlık Bant Görüntüsü ",
+  "EN": "Production Line Imaging ",
+  "DE": "Fertigungs linien-Bildgebung "
+ },
+ {
+  "Sıra No": 2,
+  "Dizi No": 1,
+  "TR": "Kalite Kontrol Sonuç ",
+  "EN": "Quality Control Result ",
+  "DE": "Ergebnis der Qualitäts kontrolle "
+ },
+ {
+  "Sıra No": 3,
+  "Dizi No": 2,
+  "TR": "İşlemler ",
+  "EN": "Operations ",
+  "DE": "Vorgänge "
+ },
+ {
+  "Sıra No": 4,
+  "Dizi No": 3,
+  "TR": "İşlem Durum Bilgisi ",
+  "EN": "Operation Status ",
+  "DE": "Vorgangs status "
+ },
+ {
+  "Sıra No": 5,
+  "Dizi No": 4,
+  "TR": "Bilgi ",
+  "EN": "Information ",
+  "DE": "Angabe"
+ },
+ {
+  "Sıra No": 6,
+  "Dizi No": 5,
+  "TR": "Mesaj ",
+  "EN": "Message ",
+  "DE": "Meldung "
+ },
+ {
+  "Sıra No": 7,
+  "Dizi No": 6,
+  "TR": "Karo Görüntüsü ",
+  "EN": "Tile Image ",
+  "DE": "Kachelbild "
+ },
+ {
+  "Sıra No": 8,
+  "Dizi No": 7,
+  "TR": "Kusur Tespit Görüntüsü ",
+  "EN": "Defect Detection Image ",
+  "DE": "Fehlererkennungs bild "
+ },
+ {
+  "Sıra No": 9,
+  "Dizi No": 8,
+  "TR": "Yüzey Kalitesi ",
+  "EN": "Surface Quality ",
+  "DE": "Oberflächen qualität "
+ },
+ {
+  "Sıra No": 10,
+  "Dizi No": 9,
+  "TR": "Kalite Sınıfı ",
+  "EN": "Quality Class ",
+  "DE": "Qualitäts klasse"
+ },
+ {
+  "Sıra No": 11,
+  "Dizi No": 10,
+  "TR": "Kusur Adedi ",
+  "EN": "Defect Number ",
+  "DE": "Fehler nummer "
+ },
+ {
+  "Sıra No": 12,
+  "Dizi No": 11,
+  "TR": "Renk Ton Değeri ",
+  "EN": "Color Tone Difference ",
+  "DE": "Farbtonunterschied "
+ },
+ {
+  "Sıra No": 13,
+  "Dizi No": 12,
+  "TR": "Sonucu Kaydet ",
+  "EN": "Save Result ",
+  "DE": "Ergebnis speichern "
+ },
+ {
+  "Sıra No": 14,
+  "Dizi No": 13,
+  "TR": "Kameradan görüntü alınıyor ",
+  "EN": "Image is being captured from camera ",
+  "DE": "Bild wird von der Kamera erfasst "
+ },
+ {
+  "Sıra No": 15,
+  "Dizi No": 14,
+  "TR": "Karo görüntüleri alınıyor ",
+  "EN": "Tile images are being captured from camera ",
+  "DE": "Kachelbilder werden von der Kamera erfasst"
+ },
+ {
+  "Sıra No": 16,
+  "Dizi No": 15,
+  "TR": "Çizik ",
+  "EN": "Crack ",
+  "DE": "Riss "
+ },
+ {
+  "Sıra No": 17,
+  "Dizi No": 16,
+  "TR": "Leke ",
+  "EN": "Fleck ",
+  "DE": "Flecken "
+ },
+ {
+  "Sıra No": 18,
+  "Dizi No": 17,
+  "TR": "Gözenek ",
+  "EN": "Pore ",
+  "DE": "Pore "
+ },
+ {
+  "Sıra No": 19,
+  "Dizi No": 18,
+  "TR": "Çatlak ",
+  "EN": "Scratch ",
+  "DE": "Kratzer "
+ },
+ {
+  "Sıra No": 20,
+  "Dizi No": 19,
+  "TR": "Benek ",
+  "EN": "Spot ",
+  "DE": "Beflecken"
+ },
+ {
+  "Sıra No": 21,
+  "Dizi No": 20,
+  "TR": "kBots Kalite Kontrol Yazılımı ",
+  "EN": "Ceramic Tile Quality Control Program ",
+  "DE": "Qualitäts Kontroll Programm für Keramikfliesen "
+ },
+ {
+  "Sıra No": 22,
+  "Dizi No": 21,
+  "TR": "Alan ",
+  "EN": "Area ",
+  "DE": "Gebiet "
+ },
+ {
+  "Sıra No": 23,
+  "Dizi No": 22,
+  "TR": "Standart Dışı",
+  "EN": "Non-standard",
+  "DE": "Nicht-Standard "
+ },
+ {
+  "Sıra No": 24,
+  "Dizi No": 23,
+  "TR": "Sınıf",
+  "EN": "Class",
+  "DE": "Klasse "
+ },
+ {
+  "Sıra No": 25,
+  "Dizi No": 24,
+  "TR": "Kazanç (Ham)",
+  "EN": "Gain (Raw)",
+  "DE": "Gewinn (roh)"
+ },
+ {
+  "Sıra No": 26,
+  "Dizi No": 25,
+  "TR": "Pozlama Süresi",
+  "EN": "Exposure Time",
+  "DE": "Belichtungs zeit "
+ },
+ {
+  "Sıra No": 27,
+  "Dizi No": 26,
+  "TR": "Bant Görüntü Değer",
+  "EN": "Image Value",
+  "DE": "Bild wert "
+ },
+ {
+  "Sıra No": 28,
+  "Dizi No": 27,
+  "TR": "Ayarları Değiştir",
+  "EN": "Change Settings",
+  "DE": "Einstellungen ändern "
+ },
+ {
+  "Sıra No": 29,
+  "Dizi No": 28,
+  "TR": "Lütfen sayısal değer giriniz",
+  "EN": "Please enter an integer value",
+  "DE": "Bitte geben Sie einen ganzzahligen Wert ein "
+ },
+ {
+  "Sıra No": 30,
+  "Dizi No": 29,
+  "TR": "En\/Boy oranı",
+  "EN": "Aspect Ratio",
+  "DE": "Seitenverhältnis"
+ },
+ {
+  "Sıra No": 31,
+  "Dizi No": 30,
+  "TR": "Karo görüntüsü alındı",
+  "EN": "Time image captured",
+  "DE": "Bil daufnahmezeit "
+ },
+ {
+  "Sıra No": 32,
+  "Dizi No": 31,
+  "TR": "Kalite sınıfı hesaplandı",
+  "EN": "Quality class is defined",
+  "DE": "Qualitäts klasse definiert "
+ },
+ {
+  "Sıra No": 33,
+  "Dizi No": 32,
+  "TR": "Kusurlar tespit edildi",
+  "EN": "Defects detected",
+  "DE": "Fehler erkannt "
+ },
+ {
+  "Sıra No": 34,
+  "Dizi No": 33,
+  "TR": "Kamera Algılama",
+  "EN": "Detecting Camera",
+  "DE": "Kamera wird erkannt "
+ },
+ {
+  "Sıra No": 35,
+  "Dizi No": 34,
+  "TR": "Kamera algınamadı. Lütfen bağlı olduğundan emin olunuz",
+  "EN": "The camera can not be detected. Please be sure it's connected.",
+  "DE": "Die Kamera kann nicht erkannt werden. Bitte stellen Sie sicher dass sie angeschlossen ist"
+ },
+ {
+  "Sıra No": 36,
+  "Dizi No": 35,
+  "TR": "Kamera açılamadı. Lütfen bağlı olduğundan emin olunuz",
+  "EN": "The camera can not be opened. Please be sure it's connected.",
+  "DE": "Die Kamera kann nicht geöffnet werden. Bitte stellen Sie sicher dass sie angeschlossen ist "
+ },
+ {
+  "Sıra No": 37,
+  "Dizi No": 36,
+  "TR": " Yüzey kalitesi hesaplandı",
+  "EN": "Surface Quality is calculated",
+  "DE": "Oberflächen qualität wird berechnet "
+ },
+ {
+  "Sıra No": 38,
+  "Dizi No": 37,
+  "TR": "Sonuçları Raporlama Sistemine Kaydet",
+  "EN": "Save Results to Reporting System",
+  "DE": "Ergebnisse im Berichtssystem speichern "
+ },
+ {
+  "Sıra No": 39,
+  "Dizi No": 38,
+  "TR": "Akış Satır Oranı",
+  "EN": "Acquisition Line Rate",
+  "DE": "Erfassungs linien rate"
+ }
+]
