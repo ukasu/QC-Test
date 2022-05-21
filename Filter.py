@@ -66,11 +66,7 @@ class Filter:
       # I2b = imfilter(I,G2b,'same','replicate');
       # I2c = imfilter(I,G2c,'same','replicate');
       #print(str(self.I_gray.shape))
-      I2a = scipy.signal.convolve2d(self.img_resized, G2a, mode='same')# Matlab ile aynı değerler
-      #I2a = scipy.signal.convolve2d(self.img_resized, G2a, mode='same')# Matlab ile aynı değerler
-      #print (I2a);
-      I2b = scipy.signal.convolve2d(self.img_resized, G2b, mode='same')
-      I2c = scipy.signal.convolve2d(self.img_resized, G2c, mode='same')
+
       #I2c = scipy.ndimage.convolve(self.I_gray, G2c, mode='reflect')
       #print(np.sum(I2c))
       J = pow(math.cos(self.theta),2)*I2a+math.pow(math.sin(self.theta),2)*I2c-2*math.cos(self.theta)*math.sin(self.theta)*I2b
